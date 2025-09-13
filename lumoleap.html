@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://github.com/CheJay2006/Canvas-Industries/blob/main/Untitled%20design.png?raw=true" type="image/png" title="Che Jay">
+    <meta property="og:image" itemprop="image" icon="https://github.com/CheJay2006/Canvas-Industries/blob/main/Untitled%20design.png?raw=true" title="Che Jay"/>
+    <meta property="og:type" content="website"/>
+    <title>LumoLeap - Illuminate Your Mind. Leap Ahead.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: LumoLeap Brand Palette -->
+    <!-- Application Structure Plan: The SPA is designed as a top-to-bottom narrative scroll, guiding the user through the brand's story. It starts with a strong value proposition (Hero), builds trust and explains the mission (About), showcases the core product (Videos), encourages engagement (Community), and ends with a clear call to action (Footer). This linear flow is intuitive for a brand introduction, ensuring users understand what LumoLeap is and how to get involved without complex navigation. Interactions like smooth scrolling and subtle animations enhance the user experience. -->
+    <!-- Visualization & Content Choices: The source material is qualitative brand information, not quantitative data. Goal: Inform & Engage. Method: The information is organized into thematic sections (About, Videos, Community) using structured HTML and styled with Tailwind CSS. For the 'Videos' section, cards with thumbnails and text are used to represent YouTube content, as direct data visualization is not applicable. For 'Community', cards represent different social channels. Interaction: Users interact via buttons linking to external social platforms. Justification: This approach is optimal for a brand website, prioritizing clear communication and direct pathways to community engagement over data charts. NO SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #6366F1, #A855F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(to right, #6366F1, #A855F7);
+        }
+        .scroll-target {
+          scroll-margin-top: 80px;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home" class="flex items-center space-x-2">
+                <img src="https://github.com/CheJay2006/Canvas-Industries/blob/main/Untitled%20design.png?raw=true" alt="LumoLeap Logo" class="h-10 w-10" style="border-radius:50%;">
+                <span class="text-2xl font-bold gradient-text">LumoLeap</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-slate-600 hover:text-purple-600 transition">Home</a>
+                <a href="#about" class="text-slate-600 hover:text-purple-600 transition">About</a>
+                <a href="#videos" class="text-slate-600 hover:text-purple-600 transition">Videos</a>
+                <a href="#community" class="text-slate-600 hover:text-purple-600 transition">Community</a>
+            </nav>
+            <a href="https://www.youtube.com/@LumoLeap" target="_blank" class="hidden md:block bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition-transform transform hover:scale-105 shadow-lg">Subscribe</a>
+            <button id="mobile-menu-button" class="md:hidden text-slate-800">
+                 <div class="w-6 h-0.5 bg-slate-800 mb-1.5"></div>
+                 <div class="w-6 h-0.5 bg-slate-800 mb-1.5"></div>
+                 <div class="w-6 h-0.5 bg-slate-800"></div>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#home" class="block text-center py-2 px-4 text-slate-600 hover:bg-slate-100">Home</a>
+            <a href="#about" class="block text-center py-2 px-4 text-slate-600 hover:bg-slate-100">About</a>
+            <a href="#videos" class="block text-center py-2 px-4 text-slate-600 hover:bg-slate-100">Videos</a>
+            <a href="#community" class="block text-center py-2 px-4 text-slate-600 hover:bg-slate-100">Community</a>
+             <div class="p-4">
+                 <a href="https://www.youtube.com/@LumoLeap" target="_blank" class="block w-full text-center bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition shadow-lg">Subscribe</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center bg-white scroll-target">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Illuminate Your Mind. <span class="gradient-text">Leap Ahead.</span></h1>
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                    Welcome to LumoLeap! We provide high-quality, easy-to-understand educational content to fuel your curiosity and help you master new skills.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://www.youtube.com/@LumoLeap" target="_blank" class="gradient-bg text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-transform transform hover:scale-105 shadow-xl">
+                        Explore Videos
+                    </a>
+                    <a href="#community" class="bg-slate-200 text-slate-800 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-slate-300 transition-transform transform hover:scale-105 shadow-xl">
+                        Join Community
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-slate-50 scroll-target">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">What is <span class="gradient-text">LumoLeap?</span></h2>
+                    <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                        LumoLeap was born from a passion for making knowledge accessible to everyone. We believe that learning should be an exciting adventure, not a chore. Our mission is to break down complex topics into engaging content that empowers you to grow, innovate, and achieve your goals.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center fade-in">
+                        <div class="w-16 h-16 gradient-bg rounded-full mx-auto flex items-center justify-center mb-4">
+                             <span class="text-3xl text-white">💡</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Accessible Knowledge</h3>
+                        <p class="text-slate-600">We distill complex subjects into clear, concise, and engaging videos that anyone can understand.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center fade-in">
+                         <div class="w-16 h-16 gradient-bg rounded-full mx-auto flex items-center justify-center mb-4">
+                            <span class="text-3xl text-white">🤝</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Thriving Community</h3>
+                        <p class="text-slate-600">Join a vibrant community of learners to discuss ideas, ask questions, and grow together.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center fade-in">
+                        <div class="w-16 h-16 gradient-bg rounded-full mx-auto flex items-center justify-center mb-4">
+                           <span class="text-3xl text-white">🚀</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Continuous Growth</h3>
+                        <p class="text-slate-600">Stay on the cutting edge with fresh content on technology, science, and personal development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="videos" class="py-20 bg-white scroll-target">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Latest From Our <span class="gradient-text">Channel</span></h2>
+                    <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                        Here are some of our recent videos. We cover a wide range of topics designed to spark your curiosity.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 rounded-xl shadow-lg overflow-hidden flex flex-col fade-in">
+                        <img src="https://placehold.co/600x400/6366F1/FFFFFF?text=AI+Explained" alt="Video Thumbnail" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">The Rise of AI: A Beginner's Guide</h3>
+                            <p class="text-slate-600 mb-4 flex-grow">Understand the basics of Artificial Intelligence and its impact on our world.</p>
+                            <a href="https://www.youtube.com/@LumoLeap" target="_blank" class="mt-auto block text-center w-full bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition">Watch on YouTube</a>
+                        </div>
+                    </div>
+                     <div class="bg-slate-50 rounded-xl shadow-lg overflow-hidden flex flex-col fade-in">
+                        <img src="https://placehold.co/600x400/A855F7/FFFFFF?text=Productivity" alt="Video Thumbnail" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">5 Productivity Hacks Backed By Science</h3>
+                            <p class="text-slate-600 mb-4 flex-grow">Learn simple techniques to boost your focus and get more done in less time.</p>
+                            <a href="https://www.youtube.com/@LumoLeap" target="_blank" class="mt-auto block text-center w-full bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition">Watch on YouTube</a>
+                        </div>
+                    </div>
+                     <div class="bg-slate-50 rounded-xl shadow-lg overflow-hidden flex flex-col fade-in">
+                        <img src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=Web+3.0" alt="Video Thumbnail" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold mb-2">What is Web 3.0? (Simple Explanation)</h3>
+                            <p class="text-slate-600 mb-4 flex-grow">Demystifying the next evolution of the internet, including blockchain and decentralization.</p>
+                            <a href="https://www.youtube.com/@LumoLeap" target="_blank" class="mt-auto block text-center w-full bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition">Watch on YouTube</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12 fade-in">
+                    <a href="https://www.youtube.com/@LumoLeap" target="_blank" class="gradient-bg text-white px-8 py-3 rounded-lg text-lg font-semibold hover:opacity-90 transition-transform transform hover:scale-105 shadow-xl">
+                        View All Videos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="py-20 bg-slate-50 scroll-target">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Join The <span class="gradient-text">Conversation</span></h2>
+                    <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                        Learning is better together. Connect with us and other LumoLeap members on your favorite platform.
+                    </p>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center fade-in">
+                        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4 text-white text-3xl font-bold">W</div>
+                        <h3 class="text-2xl font-bold mb-2">WhatsApp Channel</h3>
+                        <p class="text-slate-600 mb-6 flex-grow">Get instant updates, behind-the-scenes content, and new video alerts directly on your phone.</p>
+                        <a href="https://whatsapp.com/channel/0029Vb6rZiELo4hb4f9Eqp2s" target="_blank" class="mt-auto bg-green-500 text-white w-full px-6 py-2 rounded-lg hover:bg-green-600 transition">Join Channel</a>
+                    </div>
+                     <div class="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center fade-in">
+                        <div class="w-16 h-16 bg-sky-500 rounded-full flex items-center justify-center mb-4 text-white text-3xl font-bold">T</div>
+                        <h3 class="text-2xl font-bold mb-2">Telegram Channels</h3>
+                        <p class="text-slate-600 mb-6 flex-grow">Choose how you want to connect: get announcements in our channel or chat with the community in our group.</p>
+                        <div class="w-full flex flex-col space-y-3">
+                             <a href="https://t.me/lumoleap" target="_blank" class="bg-sky-500 text-white w-full px-6 py-2 rounded-lg hover:bg-sky-600 transition">Announcements</a>
+                             <a href="https://t.me/lumoleapchat" target="_blank" class="bg-slate-200 text-slate-800 w-full px-6 py-2 rounded-lg hover:bg-slate-300 transition">Community Chat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <a href="#home" class="flex items-center justify-center space-x-2 mb-4">
+                <img src="https://github.com/CheJay2006/Canvas-Industries/blob/main/Untitled%20design.png?raw=true" alt="LumoLeap Logo" class="h-10 w-10" style="border-radius:50%;">
+                 <span class="text-2xl font-bold">LumoLeap</span>
+            </a>
+            <p class="mb-6 text-slate-400">Ready to take the leap? Start your learning journey with us today.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                 <a href="https://www.youtube.com/@LumoLeap" target="_blank" class="text-slate-400 hover:text-white transition">YouTube</a>
+                 <a href="https://whatsapp.com/channel/0029Vb6rZiELo4hb4f9Eqp2s" target="_blank" class="text-slate-400 hover:text-white transition">WhatsApp</a>
+                 <a href="https://t.me/lumoleap" target="_blank" class="text-slate-400 hover:text-white transition">Telegram</a>
+            </div>
+            <p class="text-slate-500 text-sm">&copy; 2025 LumoLeap. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a, #header nav a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                mobileMenu.classList.add('hidden');
+                const targetId = link.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+    </script>
+</body>
+</html>
